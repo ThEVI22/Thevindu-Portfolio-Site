@@ -81,6 +81,7 @@ html {
     border-radius: 10px;
     cursor: pointer;
     transition: .4s;
+    color: var(--text-color-second);
 }
 
 .btn>i {
