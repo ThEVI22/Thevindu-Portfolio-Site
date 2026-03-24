@@ -12,9 +12,22 @@
     <!-- --------- CSS ---------- -->
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- ----- FAVICON ----- -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='35' r='22' fill='%23D80000'/><path d='M15 100 C 15 60, 85 60, 85 100 Z' fill='%23D80000'/></svg>" type="image/svg+xml">
+
     <title>Thevindu | Portfolio</title>
 </head>
 <body>
+    <!-- ----- PRELOADER ----- -->
+    <div class="preloader" id="preloader">
+        <div class="loader-content">
+            <h1 class="loader-text">WELCOME<span style="color: var(--first-color);">.</span></h1>
+            <div class="loader-bar-container">
+                <div class="loader-bar"></div>
+            </div>
+        </div>
+    </div>
+
    <div class="container">
     <!-- --------------- HEADER --------------- -->
      
@@ -42,7 +55,9 @@
             </ul>
         </div>
         <div class="nav-button">
-            <button class="btn">Download CV <i class="uil uil-file-alt"></i></button>
+            <a href="images/cv.pdf" download="Thevindu_Dilmith_CV.pdf" style="text-decoration: none;" onclick="fireConfetti()">
+                <button class="btn">Download CV <i class="uil uil-file-alt"></i></button>
+            </a>
         </div>
         <div class="nav-menu-btn">
             <i class="uil uil-bars" onclick="myMenuFunction()"></i>
@@ -70,7 +85,9 @@
             </div>
             <div class="featured-text-btn">
                 
-                <button class="btn">Download CV <i class="uil uil-file-alt"></i></button>
+                <a href="images/cv.pdf" download="Thevindu_Dilmith_CV.pdf" style="text-decoration: none;" onclick="fireConfetti()">
+                    <button class="btn">Download CV <i class="uil uil-file-alt"></i></button>
+                </a>
             </div>
             <div class="social_icons">
                 <a href="https://www.instagram.com/thev__ii/" class="icon" target="_blank">
@@ -115,7 +132,9 @@
               Through self-study, I've honed expertise in cybersecurity tools and techniques, driven by a passion for safeguarding digital assets.
               Committed to staying ahead of emerging threats, my goal is to enhance security measures and foster cyber awareness.
             </p>
-            <button class="btn">Download CV <i class="uil uil-import"></i></button>
+            <a href="images/cv.pdf" download="Thevindu_Dilmith_CV.pdf" style="text-decoration: none;" onclick="fireConfetti()">
+                <button class="btn">Download CV <i class="uil uil-import"></i></button>
+            </a>
           </div>
           <div class="skills-container">
             <div class="skills-box">
@@ -221,18 +240,19 @@
                 </div>
              </div>
              <div class="col">
-                <div class="form-control">
+                <form action="https://formsubmit.co/thevi6381@gmail.com" method="POST" class="form-control">
+                    <input type="hidden" name="_subject" value="New message from Portfolio Site!">
                     <div class="form-inputs">
-                        <input type="text" class="input-field" placeholder="Name">
-                        <input type="text" class="input-field" placeholder="Email">
+                        <input type="text" name="name" class="input-field" placeholder="Name" required>
+                        <input type="email" name="email" class="input-field" placeholder="Email" required>
                     </div>
                     <div class="text-area">
-                        <textarea placeholder="Message"></textarea>
+                        <textarea name="message" placeholder="Message" required></textarea>
                     </div>
                     <div class="form-button">
-                        <button class="btn">Send <i class="uil uil-message"></i></button>
+                        <button type="submit" class="btn">Send <i class="uil uil-message"></i></button>
                     </div>
-                </div>
+                </form>
              </div>
           </div>
        </section>
@@ -286,6 +306,9 @@
 
        <!-- ----- SCROLL REVEAL JS Link----- -->
     <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- ----- CONFETTI JS ----- -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
     <!-- ----- MAIN JS ----- -->
     <script src="Scripts/script.js"></script>

@@ -120,3 +120,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("scroll", revealOnScroll);
 });
+
+/* ----- PRELOADER ----- */
+window.addEventListener("load", function() {
+    setTimeout(function() {
+        const preloader = document.getElementById("preloader");
+        if(preloader) {
+            preloader.classList.add("fade-out");
+        }
+    }, 2000); // 2 seconds matching the animation time
+});
+
+/* ----- CONFETTI ANIMATION ----- */
+function fireConfetti() {
+    confetti({
+        particleCount: 150,
+        spread: 100,
+        origin: { y: 0.6 },
+        colors: ['#D80000', '#FF0000', '#8D0021', '#C0A631', '#ffffff'],
+        zIndex: 99999
+    });
+}
